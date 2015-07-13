@@ -1,0 +1,50 @@
+<div class="row login-wrapper">
+    <div class="box">
+        <div id="login-full-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="login-box">
+                            <div id="login-box-holder">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <header id="login-header">
+                                            <div id="login-logo">
+                                                <h2>Acesso Restrito</h2>
+                                            </div>
+                                            <div class="alert-danger">
+                                                <?php
+                                                $message = $this->flashMessage();
+                                                echo strlen($message) > 0 ? $message : '';
+                                                ?>
+                                            </div>
+                                        </header>
+                                        <form action="/application/auth/login" method="post" name="login" id="login">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                <input name="nomUsuario" id="nomUsuario" type="text"
+                                                       class="form-control"
+                                                       placeholder="Usuário" required="required">
+                                            </div>
+
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                                <input name="desSenha" id="desSenha" type="password"
+                                                       class="form-control" placeholder="Senha" required="required">
+                                            </div>
+
+                                            <div class="input-group">
+                                                <input name="submit" type="submit" class="btn btn-primary"
+                                                       value="Entrar">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

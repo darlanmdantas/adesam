@@ -1,0 +1,11 @@
+{
+    "require": {
+        "php": ">=5.5",
+        "zendframework/zendframework": "2.3.3",
+        "doctrine/doctrine-orm-module": "~0.8",
+        "doctrine/doctrine-module": "~0.8",
+        "evandotpro/edp-module-layouts":"~1.0",
+        "dino/dompdf-module": "dev-master",
+        "zendframework/zend-developer-tools": "dev-master"
+    }
+}

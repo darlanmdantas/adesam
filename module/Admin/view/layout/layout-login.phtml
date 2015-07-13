@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+		<meta charset="utf-8">
+		<?php echo $this->headLink()
+				->prependStylesheet($this->basePath('css/bootstrap/bootstrap.min.css'))
+				->prependStylesheet($this->basePath('css/libs/font-awesome.css'))
+				->prependStylesheet($this->basePath('css/compiled/theme_styles.css'))
+				->prependStylesheet($this->basePath('css/styleLogin.css'))
+
+		?>
+</head>
+<body id="login-page-full">
+<?php
+if (isset($user) && $user) :
+    $message = $this->flashMessage();
+    echo strlen($message) > 0 ? $message : '';
+endif;
+?>
+
+<?php echo $this->content; ?>
+
+<script src="<?php echo $this->basePath() . '/js/demo-rtl.js' ?>"></script>
+<script src="<?php echo $this->basePath() . '/js/jquery.js' ?>"></script>
+</body>
+</html>
